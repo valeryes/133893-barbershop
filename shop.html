@@ -64,6 +64,7 @@
             <label for="producer-6"> American Crew </label>
             <input type="checkbox" id="producer-6" name="american_crew" checked>
             <h2 class="shop-content-title"> Группы товаров: </h2>
+<<<<<<< HEAD
             <label for="items-1"> Бритвенные принадлежности </label>
             <input type="radio" id="items-1" name="items" value="shaving">
             <label for="items-2"> Средства для ухода </label>
@@ -95,6 +96,76 @@
                   </a>
                 </div>
               </div>
+=======
+            <!-- 
+              input type="radio" по такому же принципу будет стилизоваться как и input type="checkbox", поэтому и разметка должна быть одинаковой
+
+              Сделай тут разметку аналогичной той, что выше
+             -->
+            <label> Бритвенные принадлежности
+              <input type="radio" name="items" value="shaving">
+            </label>
+            <label> Средства для ухода
+              <input type="radio" name="items" value="means_for_care" checked>
+            </label>
+            <label> Аксессуары
+              <input type="radio" name="items" value="accessory">
+            </label>
+            <input type="submit" value="Показать">
+          </form>
+        </div>
+      </div>
+      <div class="shop-content-right">
+        <!-- 
+          С разметкой одного товара ты что-то перемудрил
+
+          Зачем дополнительные div goods-content и goods-unit?
+          Они не нужны тебе тут совершенно
+
+          Если мы посмотрим на карточку товара то она состоит из
+            1. Картинка, которая является ссылкой на товар
+            2. Блока, внутри которого у нас название и категория товара + цена с кнпокой купить
+
+          Если упростить твою верстку, то должно быть
+
+          <div class="goods">
+            <a href="#" class="goods-image">
+              <img src="img/shop_item_1.jpg" width="220" height="165" alt="Набор для путешествий  «BAXTER OF CALIFORNIA»">
+            </a>
+            <div class="goods-description">
+              <a href="#" class="goods-title">
+                <span class="goods-category">Набор для путешествий</span>
+                «BAXTER OF CALIFORNIA»
+
+                Тут нам достаточно одного span, потому что размеры шрифта для товара можно контролировать непосредственно через класс для ссылки
+                Не нужно плодить лишние span, div и прочее
+              </a>
+              <div class="goods-price">
+                <span class="goods-price-value">
+                  2 900 руб.
+                </span>
+                <a class="goods-btn" href="#">
+                  Купить
+                </a>
+              </div>
+            </div>
+          </div>
+         -->
+        <div class="goods">
+          <div class="goods-content">
+            <a href="#">
+              <img src="img/shop_item_1.jpg" width="220" height="165" alt="Набор для путешествий  «BAXTER OF CALIFORNIA»">
+            </a>
+          </div>
+          <a href="#">
+            <div class="goods-unit">
+              <span class="goods-category">
+                Набор для путешествий
+              </span>
+              <span class="goods-title">
+                «BAXTER OF CALIFORNIA»
+              </span>
+>>>>>>> origin/master
             </div>
             <div class="goods">
               <a href="#" class="goods-image">
@@ -208,7 +279,20 @@
             <a href="#3"> 3 </a>
             <a href="#4"> 4 </a>
           </div>
+<<<<<<< HEAD
         </div>  
+=======
+        </div>
+      </div>
+      <!-- 
+        Пагинатор должен быть внутри колонки shop-right
+       -->
+      <div class="paginator">
+        <a href="#1"> 1 </a>
+        <a class="current" href="#2"> 2 </a>
+        <a href="#3"> 3 </a>
+        <a href="#4"> 4 </a>
+>>>>>>> origin/master
       </div>
     </main>
     <footer class="main-footer">
