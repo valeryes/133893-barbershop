@@ -152,9 +152,10 @@ h2 {
   }
 
   .item-gallery-small {
+    display: block;
     float: left;
+    height: 149px;
     margin-right: 20px;
-    margin-bottom: 0;
   }
 
   .item-gallery-small:last-child {
